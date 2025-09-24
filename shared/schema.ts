@@ -28,6 +28,11 @@ export const insertContactMessageSchema = createInsertSchema(contactMessages).pi
   email: true,
   subject: true,
   message: true,
+}).extend({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(1, "Message is required"),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
