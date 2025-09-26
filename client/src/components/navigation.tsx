@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useTheme } from "@/components/theme-provider";
-import lightLogo from "@assets/light_1758905947834.png";
-import darkLogo from "@assets/dark_1758905947833.png";
+import lightLogo from "@assets/light-mode_1758906699196.png";
+import darkLogo from "@assets/dark-mode_1758906699195.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
