@@ -43,7 +43,7 @@ export default function Navigation() {
               <img 
                 src={actualTheme === 'light' ? lightLogo : darkLogo}
                 alt="Logo"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
                 data-testid="nav-logo"
               />
             </div>
