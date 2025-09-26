@@ -3,9 +3,13 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useTheme } from "@/components/theme-provider";
+import lightLogo from "@assets/light_1758905947834.png";
+import darkLogo from "@assets/dark_1758905947833.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { actualTheme } = useTheme();
 
   const navigationItems = [
     { href: "#home", label: "Home" },
@@ -35,8 +39,13 @@ export default function Navigation() {
       <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-semibold">
-              <span className="gradient-text">Alex Chen</span>
+            <div className="flex items-center">
+              <img 
+                src={actualTheme === 'light' ? lightLogo : darkLogo}
+                alt="Logo"
+                className="h-8 w-auto"
+                data-testid="nav-logo"
+              />
             </div>
             
             {/* Desktop Navigation */}
