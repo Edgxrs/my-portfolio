@@ -27,7 +27,7 @@ export default function HeroSection() {
             variants={fadeInVariants}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6" data-testid="hero-title">
-              Hello, I'm <span className="gradient-text">Alex</span>
+              Hello, I'm <span className="gradient-text">Edgars</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-description">
               A passionate UX/UI Designer creating beautiful, functional digital experiences

@@ -45,7 +45,7 @@ export default function AboutSection() {
             >
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-                alt="Alex Chen profile photo" 
+                alt="Edgars profile photo" 
                 className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
                 data-testid="profile-image"
               />
