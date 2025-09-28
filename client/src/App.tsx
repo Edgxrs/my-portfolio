@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import { useHashLocation } from "wouter/use-hash-location";
+
 
 function AppRouter() {
   return (
@@ -22,7 +24,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
-          <Router base="/my-portfolio">
+          <Router hook={useHashLocation}>
             <AppRouter />
           </Router>
         </TooltipProvider>
