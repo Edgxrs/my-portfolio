@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-muted-foreground">
-              © 2024 Edgars. Designed and built with passion.
+              © 2025 Edgars. Designed and built with passion.
             </p>
           </div>
         </div>

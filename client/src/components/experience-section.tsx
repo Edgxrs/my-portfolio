@@ -6,45 +6,58 @@ import { fadeInVariants } from "@/lib/animations";
 const experiences = [
   {
     id: "education",
-    period: "FOUNDATION • 2022-2023",
+    period: "FOUNDATION • 2022-2024",
     title: "Design Education & Skill Development",
-    description: "Built foundational design skills through comprehensive academic projects focusing on UX research, visual design, and design thinking. These projects established my understanding of user-centered design principles and design methodology.",
+    description:
+      "Developed a base set of skills in UX/UI design as well as various other fields such as frontend development, content creation and brand development. This was done through acquiring an Academy Profession degree in Multimedia Design at the Copenhagen School of Design and Technology (KEA). ",
     projects: [
       {
-        title: "UX Research Project",
-        description: "E-commerce platform redesign with comprehensive user research",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
+        title: "UX/UI + Design Skills",
+        description:
+          "Learned and practiced various design methods and approaches. Worked extensively with platforms like XD and Figma.",
+        image:
+          "https://i.ibb.co/fYwVPQXQ/Screenshot-2025-09-28-at-22-04-57.pngs",
       },
       {
-        title: "Brand Identity System",
-        description: "Complete brand development for sustainable fashion startup",
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
+        title: "Frontend Development",
+        description:
+          "Developed a skillset in order to bring the design solutions - as well as different functional solutions - to life through coding.",
+        image:
+          "https://i.ibb.co/4wQVKZhB/Screenshot-2025-09-28-at-18-46-12.png",
       },
     ],
     achievements: [
       "Mastered fundamental design principles and methodology",
       "Learned comprehensive UX research and testing techniques",
       "Developed skills in visual design and brand strategy",
-      "Established foundation for professional design career"
+      "Established foundation for professional design career",
     ],
-    tags: ["Design Education", "UX Research", "Brand Strategy", "Academic Projects"]
+    tags: [
+      "Design Education",
+      "UX Research",
+      "Brand Strategy",
+      "Coding",
+      "Teamwork",
+    ],
   },
   {
     id: "internship",
-    period: "PROFESSIONAL • 2023-2024",
+    period: "PROFESSIONAL • 2023",
     title: "UX/UI Designer Intern at Compar",
     description:
       "Gained real-world experience designing and developing user interfaces for both web and mobile platforms. This internship taught me how to work within professional constraints while delivering high-quality design solutions that meet business objectives.",
     projects: [
       {
         title: "Website Design",
-        description: "Responsive web platform designed and developed from concept to launch",
+        description:
+          "Responsive web platform designed and developed from concept to launch",
         image:
           "https://i.ibb.co/KzjVG3CM/Screenshot-2025-09-27-at-17-09-58.png",
       },
       {
         title: "iOS Application",
-        description: "Mobile app interface design with focus on user experience",
+        description:
+          "Mobile app interface design with focus on user experience",
         image: "https://i.ibb.co/1G7rn7jq/Untitled-design.png",
       },
     ],
@@ -52,20 +65,26 @@ const experiences = [
       "Successfully delivered web and mobile projects within professional deadlines",
       "Collaborated with development team and stakeholders on design decisions",
       "Gained experience in professional design workflow and client communication",
-      "Validated ability to work in real-world business environment"
+      "Validated ability to work in real-world business environment",
     ],
-    tags: ["Professional Experience", "Web Design", "iOS Design", "Team Collaboration"],
+    tags: [
+      "Professional Experience",
+      "Web Design",
+      "iOS Prototyping",
+      "Team Collaboration",
+    ],
   },
   {
     id: "current-project",
-    period: "CURRENT • 2024",
+    period: "CURRENT • 2025",
     title: "Independent Full-Stack Developer & Designer",
     description:
-      "Taking on complex challenges by building complete solutions from design to development. Currently working on a comprehensive portfolio website that showcases both my design thinking and technical capabilities, marking my transition into full-stack development.",
+      "Taking on complex challenges by building complete solutions for a healthcare facility from design to development. Currently working on a comprehensive website that showcases both my design thinking and technical capabilities, marking my transition into full-stack development.",
     projects: [
       {
-        title: "Portfolio Website",
-        description: "Full-stack React application with custom animations and responsive design",
+        title: "Hospice Website",
+        description:
+          "Full-stack application with custom functionality and responsive design",
         image:
           "https://i.ibb.co/4gJ1pmph/Screenshot-2025-09-27-at-17-36-04.png",
       },
@@ -80,9 +99,16 @@ const experiences = [
       "Self-taught full-stack development while maintaining design quality",
       "Built complex animations and interactions using modern web technologies",
       "Implemented responsive design with accessibility best practices",
-      "Created cohesive brand identity with theme-aware components"
+      "Created cohesive brand identity with theme-aware components",
     ],
-    tags: ["Full-Stack Development", "React", "TypeScript", "Branding", "UI/UX"],
+    tags: [
+      "Full-Stack Development",
+      "PHP",
+      "TypeScript",
+      "Wordpress",
+      "Branding",
+      "UI/UX",
+    ],
   },
 ];
 
@@ -111,8 +137,9 @@ export default function ExperienceSection() {
               className="text-lg text-muted-foreground max-w-3xl mx-auto"
               data-testid="experience-description"
             >
-              From academic foundations through professional experience to current independent projects, 
-              this timeline shows my growth as a designer and developer.
+              From academic foundations through professional experience to
+              current independent projects, this timeline shows my growth as a
+              designer and developer.
             </p>
           </motion.div>
 
