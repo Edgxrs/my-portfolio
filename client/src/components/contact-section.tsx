@@ -9,7 +9,14 @@ import { FaLinkedin, FaDribbble, FaBehance, FaGithub } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { fadeInVariants } from "@/lib/animations";
 import { insertContactMessageSchema } from "@shared/schema";
@@ -26,18 +33,18 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "alex.chen.design@email.com"
+    value: "edgxrs.web@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567"
+    value: "+34 615 722 468",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA"
-  }
+    value: "Madrid, ES / Riga, LV",
+  },
 ];
 
 const socialLinks = [
@@ -98,10 +105,19 @@ export default function ContactSection() {
             variants={fadeInVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="contact-title">Let's Work Together</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="contact-description">
-              I'm always excited to collaborate on new projects and explore opportunities. 
-              Whether you have a project in mind or just want to chat about design, feel free to reach out!
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              data-testid="contact-title"
+            >
+              Let's Work Together
+            </h2>
+            <p
+              className="text-lg text-muted-foreground max-w-2xl mx-auto"
+              data-testid="contact-description"
+            >
+              I'm always excited to collaborate on new projects and explore
+              opportunities. Whether you have a project in mind or just want to
+              chat about design, feel free to reach out!
             </p>
           </motion.div>
 
@@ -112,10 +128,19 @@ export default function ContactSection() {
               variants={fadeInVariants}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="text-2xl font-semibold mb-6" data-testid="contact-info-title">Get In Touch</h3>
+              <h3
+                className="text-2xl font-semibold mb-6"
+                data-testid="contact-info-title"
+              >
+                Get In Touch
+              </h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <div key={info.label} className="flex items-center space-x-4" data-testid={`contact-info-${info.label.toLowerCase()}`}>
+                  <div
+                    key={info.label}
+                    className="flex items-center space-x-4"
+                    data-testid={`contact-info-${info.label.toLowerCase()}`}
+                  >
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <info.icon className="h-5 w-5 text-primary" />
                     </div>
@@ -128,7 +153,12 @@ export default function ContactSection() {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4" data-testid="social-links-title">Follow Me</h4>
+                <h4
+                  className="text-lg font-semibold mb-4"
+                  data-testid="social-links-title"
+                >
+                  Follow Me
+                </h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
                     <a
@@ -152,7 +182,7 @@ export default function ContactSection() {
               transition={{ delay: 0.4 }}
             >
               <Form {...form}>
-                <form 
+                <form
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="bg-card p-8 rounded-xl border border-border shadow-lg space-y-6"
                   data-testid="contact-form"
@@ -164,9 +194,9 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="Your name" 
-                            {...field} 
+                          <Input
+                            placeholder="Your name"
+                            {...field}
                             data-testid="input-name"
                           />
                         </FormControl>
@@ -174,7 +204,7 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="email"
@@ -182,10 +212,10 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input 
-                            type="email" 
-                            placeholder="your@email.com" 
-                            {...field} 
+                          <Input
+                            type="email"
+                            placeholder="your@email.com"
+                            {...field}
                             data-testid="input-email"
                           />
                         </FormControl>
@@ -193,7 +223,7 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="subject"
@@ -201,9 +231,9 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Subject</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="What's this about?" 
-                            {...field} 
+                          <Input
+                            placeholder="What's this about?"
+                            {...field}
                             data-testid="input-subject"
                           />
                         </FormControl>
@@ -211,7 +241,7 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="message"
@@ -219,10 +249,10 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Tell me about your project..." 
-                            className="min-h-[120px] resize-none" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell me about your project..."
+                            className="min-h-[120px] resize-none"
+                            {...field}
                             data-testid="input-message"
                           />
                         </FormControl>
@@ -230,9 +260,9 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                     disabled={contactMutation.isPending}
                     data-testid="submit-contact-form"

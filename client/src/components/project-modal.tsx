@@ -15,13 +15,6 @@ interface ProjectModalProps {
     results?: string;
     approach?: string;
     tools: string[];
-    challenges?: string[];
-    achievements?: string[];
-    scope?: string[];
-    technologies?: string[];
-    impact?: string;
-    methodology?: string[];
-    skills?: string;
   };
   isOpen: boolean;
   onClose: () => void;
@@ -122,50 +115,6 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     </>
                   )}
                   
-                  {project.challenges && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Challenges Overcome</h4>
-                      <ul className="text-muted-foreground space-y-2 mb-6" data-testid="modal-challenges">
-                        {project.challenges.map((challenge, index) => (
-                          <li key={index}>• {challenge}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                  
-                  {project.achievements && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Key Achievements</h4>
-                      <ul className="text-muted-foreground space-y-2 mb-6" data-testid="modal-achievements">
-                        {project.achievements.map((achievement, index) => (
-                          <li key={index}>• {achievement}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                  
-                  {project.scope && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Project Scope</h4>
-                      <ul className="text-muted-foreground space-y-2 mb-6" data-testid="modal-scope">
-                        {project.scope.map((item, index) => (
-                          <li key={index}>• {item}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                  
-                  {project.methodology && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Methodology</h4>
-                      <ul className="text-muted-foreground space-y-2 mb-6" data-testid="modal-methodology">
-                        {project.methodology.map((method, index) => (
-                          <li key={index}>• {method}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                  
                   {project.approach && (
                     <>
                       <h4 className="text-lg font-semibold mb-4">Design Approach</h4>
@@ -175,50 +124,13 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     </>
                   )}
                   
-                  {project.impact && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Impact & Learning</h4>
-                      <div className="bg-muted/50 rounded-lg p-4 mb-6">
-                        <p className="text-sm text-muted-foreground" data-testid="modal-impact">
-                          {project.impact}
-                        </p>
-                      </div>
-                    </>
-                  )}
-                  
-                  {project.skills && (
-                    <>
-                      <h4 className="text-lg font-semibold mb-4">Skills Developed</h4>
-                      <p className="text-sm text-muted-foreground mb-6" data-testid="modal-skills">
-                        {project.skills}
-                      </p>
-                    </>
-                  )}
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {project.technologies && (
-                      <div>
-                        <h4 className="text-lg font-semibold mb-4">Technologies</h4>
-                        <div className="flex flex-wrap gap-2" data-testid="modal-technologies">
-                          {project.technologies.map((tech) => (
-                            <span key={tech} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                    
-                    <div>
-                      <h4 className="text-lg font-semibold mb-4">Tools Used</h4>
-                      <div className="flex flex-wrap gap-2" data-testid="modal-tools">
-                        {project.tools.map((tool) => (
-                          <span key={tool} className="bg-muted px-3 py-1 rounded-full text-sm">
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                  <h4 className="text-lg font-semibold mb-4">Tools Used</h4>
+                  <div className="flex flex-wrap gap-2" data-testid="modal-tools">
+                    {project.tools.map((tool) => (
+                      <span key={tool} className="bg-muted px-3 py-1 rounded-full text-sm">
+                        {tool}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
