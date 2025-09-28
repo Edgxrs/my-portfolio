@@ -6,58 +6,97 @@ import ProjectModal from "@/components/project-modal";
 
 const portfolioProjects = [
   {
-    id: "food-delivery",
-    category: "EDUCATION PROJECT",
-    title: "Food Delivery App",
-    description: "A comprehensive mobile app design focusing on user experience and visual hierarchy for food ordering.",
-    image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    tags: ["UI/UX", "Mobile", "Prototyping"],
-    overview: "This educational project focused on creating a comprehensive food delivery application with emphasis on user experience research, information architecture, and visual design. The project included user personas, journey mapping, wireframing, and high-fidelity prototyping.",
+    id: "portfolio-website",
+    category: "CURRENT PROJECT",
+    title: "Personal Portfolio Website",
+    description: "A full-stack portfolio website built from scratch, combining advanced design with modern web development.",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    tags: ["Full-Stack", "React", "TypeScript", "UI/UX"],
+    overview: "My most complex project to date - a complete portfolio website showcasing my design and development capabilities. This project represents my journey into full-stack development while maintaining strong design principles. Built with React, TypeScript, and modern development practices.",
     features: [
-      "Intuitive restaurant browsing and filtering",
-      "Streamlined ordering process",
-      "Real-time order tracking",
-      "Personalized recommendations",
-      "Integrated payment system"
+      "Custom responsive design with dark/light theme support",
+      "Smooth animations and micro-interactions using Framer Motion",
+      "Full-stack contact form with backend validation",
+      "Interactive portfolio showcases with modal presentations",
+      "Custom logo design with theme-aware switching",
+      "Mobile-first responsive design approach"
     ],
-    tools: ["Figma", "Principle", "User Research", "Prototyping"]
+    challenges: [
+      "Learning full-stack development from scratch",
+      "Implementing complex animations while maintaining performance",
+      "Creating a cohesive design system",
+      "Balancing visual appeal with usability"
+    ],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js", "Express"],
+    tools: ["Figma", "VSCode", "Git", "Replit"]
   },
   {
-    id: "ecommerce",
-    category: "EDUCATION PROJECT",
-    title: "E-commerce Platform",
-    description: "Redesign of an existing e-commerce platform with focus on conversion optimization and user flow.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    tags: ["Web Design", "UX Research", "Figma"],
-    overview: "A complete redesign of an existing e-commerce platform focusing on improving conversion rates, reducing cart abandonment, and enhancing overall user experience. The project involved extensive user research and A/B testing of key interaction points.",
-    improvements: [
-      "Simplified checkout process (reduced from 6 to 3 steps)",
-      "Enhanced product discovery with smart filters",
-      "Improved mobile responsiveness",
-      "Better product imagery and information hierarchy",
-      "Trust signals and social proof integration"
+    id: "internship-project",
+    category: "PROFESSIONAL PROJECT",
+    title: "Business Platform & iOS App",
+    description: "Comprehensive website design and iOS app development during professional internship experience.",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    tags: ["Web Design", "iOS", "Professional", "Team Work"],
+    overview: "During my internship, I had the opportunity to work on both web and mobile platforms, designing and developing a comprehensive business solution. This project taught me how to work within professional constraints while delivering high-quality design solutions.",
+    achievements: [
+      "Successfully designed and developed a responsive business website",
+      "Created iOS app interface and user experience",
+      "Collaborated with development team and stakeholders",
+      "Delivered projects within deadline and budget constraints",
+      "Gained real-world experience in professional design workflow"
     ],
-    results: "The redesign resulted in a 25% increase in conversion rate and 40% reduction in cart abandonment during user testing phase.",
-    tools: ["Figma", "User Research", "A/B Testing", "Analytics"]
+    scope: [
+      "Website design and development from concept to launch",
+      "iOS app prototyping and design system creation",
+      "User research and stakeholder collaboration",
+      "Cross-platform design consistency",
+      "Professional client communication"
+    ],
+    impact: "This internship validated my ability to work in a professional environment and deliver real business value through design and development.",
+    tools: ["Figma", "Sketch", "Xcode", "HTML/CSS", "JavaScript"]
+  },
+  {
+    id: "ecommerce-redesign",
+    category: "EDUCATION PROJECT",
+    title: "E-commerce Platform Redesign",
+    description: "Comprehensive UX research and redesign project focusing on conversion optimization and user experience.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    tags: ["UX Research", "Web Design", "Academic"],
+    overview: "An academic project that challenged me to redesign an existing e-commerce platform through comprehensive user research, testing, and iterative design. This project established my foundation in user-centered design methodology.",
+    methodology: [
+      "Conducted user interviews and usability testing",
+      "Performed competitive analysis and market research",
+      "Created user personas and journey maps",
+      "Developed wireframes and high-fidelity prototypes",
+      "Implemented and tested design solutions"
+    ],
+    improvements: [
+      "Streamlined checkout process reducing steps by 50%",
+      "Enhanced product discovery with intuitive navigation",
+      "Improved mobile responsiveness and accessibility",
+      "Integrated trust signals and social proof elements"
+    ],
+    results: "The redesign demonstrated measurable improvements in user testing, with increased task completion rates and positive user feedback on the enhanced experience.",
+    tools: ["Figma", "User Research", "Prototyping", "Usability Testing"]
   },
   {
     id: "brand-identity",
-    category: "EDUCATION PROJECT",
-    title: "Brand Identity System",
-    description: "Complete brand identity development including logo, color palette, and brand guidelines.",
+    category: "EDUCATION PROJECT", 
+    title: "Sustainable Fashion Brand Identity",
+    description: "Complete brand identity development showcasing strategic thinking and visual design skills.",
     image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    tags: ["Branding", "Logo Design", "Identity"],
-    overview: "Development of a comprehensive brand identity system for a fictional sustainable fashion startup. The project included logo design, color palette development, typography selection, and application across various touchpoints.",
+    tags: ["Branding", "Logo Design", "Academic"],
+    overview: "A comprehensive brand identity project that developed my skills in strategic brand thinking and visual identity design. Created for a fictional sustainable fashion startup, demonstrating ability to translate brand values into visual communication.",
     deliverables: [
       "Primary and secondary logo variations",
-      "Comprehensive color system",
-      "Typography guidelines",
-      "Business card and stationery design",
-      "Social media templates",
-      "Brand guidelines document"
+      "Comprehensive color palette and typography system",
+      "Brand guidelines and application standards",
+      "Business collateral and digital templates",
+      "Brand strategy and positioning framework"
     ],
-    approach: "The brand identity reflects the company's commitment to sustainability through earthy colors, organic shapes, and clean typography that communicates trust and authenticity.",
-    tools: ["Adobe Illustrator", "Adobe InDesign", "Figma", "Brand Strategy"]
+    approach: "Developed a brand identity that authentically communicates sustainability values through thoughtful color choices, organic forms, and clean typography that builds trust and conveys environmental consciousness.",
+    skills: "This project strengthened my strategic thinking, attention to detail, and ability to create cohesive visual systems that support business objectives.",
+    tools: ["Adobe Illustrator", "InDesign", "Figma", "Brand Strategy"]
   }
 ];
 
@@ -77,10 +116,10 @@ export default function PortfolioSection() {
             variants={fadeInVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="portfolio-title">My Portfolio</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="portfolio-title">Featured Work</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="portfolio-description">
-              A collection of projects that showcase my journey as a designer, from educational assignments 
-              to professional work and personal ventures.
+              From complex full-stack development to professional design work and academic foundations, 
+              these projects showcase my growth and capabilities across the design and development spectrum.
             </p>
           </motion.div>
 
