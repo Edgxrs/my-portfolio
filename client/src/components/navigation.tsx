@@ -25,10 +25,10 @@ export default function Navigation() {
       const offset = 80;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
+
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
     setIsMobileMenuOpen(false);
@@ -40,14 +40,15 @@ export default function Navigation() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <img 
-                src={actualTheme === 'light' ? lightLogo : darkLogo}
+              <img
+                src={actualTheme === "light" ? lightLogo : darkLogo}
                 alt="Logo"
-                className="h-12 w-auto"
+                className="h-12 w-auto cursor-pointer"
                 data-testid="nav-logo"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               />
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <div className="flex space-x-8">
@@ -64,7 +65,7 @@ export default function Navigation() {
               </div>
               <ThemeToggle />
             </div>
-            
+
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center space-x-2">
               <ThemeToggle />
@@ -74,7 +75,11 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="mobile-menu-toggle"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </Button>
             </div>
           </div>
