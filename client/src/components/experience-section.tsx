@@ -5,48 +5,79 @@ import { fadeInVariants } from "@/lib/animations";
 
 const experiences = [
   {
-    id: "current-project",
-    period: "CURRENT PROJECT • 2024",
-    title: "Full-Stack Website & Branding",
-    description: "Currently working on a comprehensive project that includes building a complete website from scratch and creating the company's brand identity including logo design and visual guidelines.",
+    id: "education",
+    period: "FOUNDATION • 2022-2023",
+    title: "Design Education & Skill Development",
+    description: "Built foundational design skills through comprehensive academic projects focusing on UX research, visual design, and design thinking. These projects established my understanding of user-centered design principles and design methodology.",
     projects: [
       {
-        title: "Website Development",
-        description: "Full responsive website with modern UI/UX principles",
-        image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
+        title: "UX Research Project",
+        description: "E-commerce platform redesign with comprehensive user research",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
       },
       {
-        title: "Brand Identity",
-        description: "Complete logo design and brand guidelines creation",
-        image: "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
+        title: "Brand Identity System",
+        description: "Complete brand development for sustainable fashion startup",
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
       }
     ],
-    tags: ["Web Development", "Branding", "Logo Design", "UI/UX"]
+    achievements: [
+      "Mastered fundamental design principles and methodology",
+      "Learned comprehensive UX research and testing techniques",
+      "Developed skills in visual design and brand strategy",
+      "Established foundation for professional design career"
+    ],
+    tags: ["Design Education", "UX Research", "Brand Strategy", "Academic Projects"]
   },
   {
     id: "internship",
-    period: "INTERNSHIP • 2023-2024",
-    title: "UX/UI Designer Intern at TechStart",
-    description: "Designed and developed user interfaces for both web and mobile platforms. Created an iOS app that has been successfully published and is currently running in production.",
+    period: "PROFESSIONAL • 2023-2024",
+    title: "UX/UI Designer Intern",
+    description: "Gained real-world experience designing and developing user interfaces for both web and mobile platforms. This internship taught me how to work within professional constraints while delivering high-quality design solutions that meet business objectives.",
     projects: [
       {
-        title: "Website Design",
-        description: "Responsive web platform with focus on user engagement",
+        title: "Business Website",
+        description: "Responsive web platform designed and developed from concept to launch",
         image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
       },
       {
-        title: "iOS App - Published",
-        description: "Live iOS application with 5000+ downloads",
+        title: "iOS Application",
+        description: "Mobile app interface design with focus on user experience",
         image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
       }
     ],
     achievements: [
-      "Increased user engagement by 40% through redesigned user flow",
-      "Successfully launched iOS app with 4.8-star rating on App Store",
-      "Collaborated with development team to ensure design feasibility",
-      "Conducted user research and A/B testing for optimization"
+      "Successfully delivered web and mobile projects within professional deadlines",
+      "Collaborated with development team and stakeholders on design decisions",
+      "Gained experience in professional design workflow and client communication",
+      "Validated ability to work in real-world business environment"
     ],
-    tags: ["iOS Design", "Web Design", "User Research", "A/B Testing"]
+    tags: ["Professional Experience", "Web Design", "iOS Design", "Team Collaboration"]
+  },
+  {
+    id: "current-project",
+    period: "CURRENT • 2024",
+    title: "Independent Full-Stack Developer & Designer",
+    description: "Taking on complex challenges by building complete solutions from design to development. Currently working on a comprehensive portfolio website that showcases both my design thinking and technical capabilities, marking my transition into full-stack development.",
+    projects: [
+      {
+        title: "Portfolio Website",
+        description: "Full-stack React application with custom animations and responsive design",
+        image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
+      },
+      {
+        title: "Brand Identity System",
+        description: "Complete logo design with dark/light theme integration",
+        image: "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
+      }
+    ],
+    achievements: [
+      "Self-taught full-stack development while maintaining design quality",
+      "Built complex animations and interactions using modern web technologies",
+      "Implemented responsive design with accessibility best practices",
+      "Created cohesive brand identity with theme-aware components"
+    ],
+    tags: ["Full-Stack Development", "React", "TypeScript", "Branding", "UI/UX"]
   }
 ];
 
@@ -65,10 +96,10 @@ export default function ExperienceSection() {
             variants={fadeInVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="experience-title">Professional Experience</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="experience-title">My Journey</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="experience-description">
-              My journey in the professional world, including internships and real-world projects 
-              that have shaped my skills and perspective as a designer.
+              From academic foundations through professional experience to current independent projects, 
+              this timeline shows my growth as a designer and developer.
             </p>
           </motion.div>
 
