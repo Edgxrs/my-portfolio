@@ -48,10 +48,8 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { icon: FaDribbble, href: "#", label: "Dribbble" },
-  { icon: FaBehance, href: "#", label: "Behance" },
-  { icon: FaGithub, href: "#", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/edgars-gerhards/", label: "LinkedIn" },
+  { icon: FaGithub, href: "https://github.com/Edgxrs", label: "GitHub" },
 ];
 
 export default function ContactSection() {

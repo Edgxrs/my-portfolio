@@ -8,15 +8,17 @@ const skills = [
   { name: "Prototyping", percentage: "90%" },
   { name: "Web Development", percentage: "75%" },
   { name: "Branding", percentage: "85%" },
+  { name: "Content Creation", percentage: "80%"},
+  { name: "Social Media", percentage: "95%"},
 ];
 
 const tools = [
   "Figma",
   "Adobe XD",
-  "Sketch",
-  "Principle",
+  "TypeScript",
   "HTML/CSS",
   "JavaScript",
+  "AI Tools",
 ];
 
 export default function AboutSection() {
@@ -45,9 +47,9 @@ export default function AboutSection() {
               data-testid="about-description"
             >
               I'm a dedicated designer with a passion for creating intuitive and
-              beautiful digital experiences. Currently pursuing my education
-              while gaining real-world experience through internships and
-              personal projects.
+              beautiful digital experiences. Currently looking to network and collaborate
+              while gaining experience through internships and
+              personal projects in the meantime. 
             </p>
           </motion.div>
 

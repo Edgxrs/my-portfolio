@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, ExternalLink, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { modalVariants } from "@/lib/animations";
 
@@ -22,6 +22,7 @@ interface ProjectModalProps {
     impact?: string;
     methodology?: string[];
     skills?: string;
+    links?: { label: string; url: string; type?: 'link' | 'download' }[];
   };
   isOpen: boolean;
   onClose: () => void;
@@ -77,6 +78,32 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   <p className="text-muted-foreground mb-6" data-testid="modal-overview">
                     {project.overview}
                   </p>
+                  
+                  {project.links && project.links.length > 0 && (
+                    <>
+                      <h4 className="text-lg font-semibold mb-4">Project Links</h4>
+                      <div className="flex flex-wrap gap-3 mb-6" data-testid="modal-links">
+                        {project.links.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.url}
+                            target={link.type === 'download' ? undefined : "_blank"}
+                            rel={link.type === 'download' ? undefined : "noopener noreferrer"}
+                            download={link.type === 'download' ? true : undefined}
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
+                            data-testid={`link-${index}`}
+                          >
+                            {link.label}
+                            {link.type === 'download' ? (
+                              <Download className="h-4 w-4" />
+                            ) : (
+                              <ExternalLink className="h-4 w-4" />
+                            )}
+                          </a>
+                        ))}
+                      </div>
+                    </>
+                  )}
                   
                   {project.features && (
                     <>

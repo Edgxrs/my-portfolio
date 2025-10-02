@@ -30,8 +30,7 @@ export default function HeroSection() {
               Hello, I'm <span className="gradient-text">Edgars</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-description">
-              A passionate UX/UI Designer creating beautiful, functional digital experiences
-              that solve real problems and delight users.
+              Passionate about user-friendly design, brand development and intuitive, creative solutions. Currently looking to expand my horizons and put my skillset to use while also developing it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
