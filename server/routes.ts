@@ -10,6 +10,43 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(validatedData);
+      
+      // Send email notification via Resend
+      const resendApiKey = process.env.RESEND_API_KEY;
+      if (resendApiKey) {
+        try {
+          const emailResponse = await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${resendApiKey}`,
+            },
+            body: JSON.stringify({
+              from: "Portfolio Contact <onboarding@resend.dev>",
+              to: ["gerhards.edgars@gmail.com"],
+              subject: `New Contact Form Message: ${validatedData.subject}`,
+              html: `
+                <h2>New Contact Form Submission</h2>
+                <p><strong>From:</strong> ${validatedData.name}</p>
+                <p><strong>Email:</strong> ${validatedData.email}</p>
+                <p><strong>Subject:</strong> ${validatedData.subject}</p>
+                <p><strong>Message:</strong></p>
+                <p>${validatedData.message.replace(/\n/g, '<br>')}</p>
+              `,
+            }),
+          });
+
+          if (emailResponse.ok) {
+            const emailData = await emailResponse.json();
+            console.log("✅ Email sent successfully via Resend:", emailData.id);
+          } else {
+            console.error("❌ Failed to send email via Resend:", await emailResponse.text());
+          }
+        } catch (emailError) {
+          console.error("Error sending email:", emailError);
+        }
+      }
+      
       res.json({ success: true, message: "Message sent successfully", id: message.id });
     } catch (error) {
       if (error instanceof z.ZodError) {
