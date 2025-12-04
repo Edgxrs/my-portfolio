@@ -38,12 +38,12 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+34 615 722 468",
+    value: "+371 26 225 684",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Madrid, ES / Riga, LV",
+    value: "Riga, LV",
   },
 ];
 

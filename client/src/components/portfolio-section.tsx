@@ -20,8 +20,7 @@ const portfolioProjects = [
     overview:
       "My most complex project to date - a complete website showcasing the services of a healthcare facility through my design and development capabilities. This project represents my journey into full-stack development while maintaining strong design principles. In addition, I also designed the facility's logo and brand identity, and collaborated in content creation.",
     links: [
-      { label: "Live Site - TBC", url: "#" },
-      { label: "YouTube demo", url: "https://youtu.be/vW3KUuR4VXA" },
+      { label: "Live Site", url: "https://paliativaaprupe.samariesi.lv" },
     ],
     features: [
       "Custom responsive design",
