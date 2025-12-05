@@ -20,7 +20,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { fadeInVariants } from "@/lib/animations";
 import { insertContactMessageSchema } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 
 type ContactFormData = {
   name: string;
@@ -69,7 +68,17 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      const response = await fetch("https://formspree.io/f/mblzybae", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
       return response.json();
     },
     onSuccess: () => {
