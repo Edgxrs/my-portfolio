@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, User } from "lucide-react";
 import { FaLinkedin, FaDribbble, FaBehance, FaGithub } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,6 +29,11 @@ type ContactFormData = {
 };
 
 const contactInfo = [
+  {
+    icon: User,
+    label: "Name",
+    value: "Edgars Gerhards",
+  },
   {
     icon: Mail,
     label: "Email",
